@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import First from "./components/First";
+import Intro from "./components/Intro";
+import Count from "./components/Count";
+import Clock from "./components/Clock";
+import Borad from "./components/Borad";
+import UserClock from "./components/UserClock";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <First name="sun" number={5} />
+      <Intro name="Park sunhong" age={96} email="tjsghd0317@gmail.com" comment="안녕하세요. FE개발자입니다." />
+      <Count/>
+      <Clock timezone="Asia/Seoul" newTZ="US/Pacific" />
+      <Clock timezone="Asia/Taipei" newTZ="US/Pacific" />
+      <Borad category="드라마" />
+      <UserClock timezone="Asia/Seoul" />
     </div>
   );
 }
